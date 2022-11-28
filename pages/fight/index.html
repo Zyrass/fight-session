@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <!-- COMBAT -->
+      <section class="combat" id="combat">
+        <!-- PLAYER -->
+        <div class="left">
+          <div class="card">
+            <h3>Pseudo</h3>
+            <div class="stats">
+              <div class="lifebar">
+                <span>❤</span>
+                <div><span>150</span> pv / <span>150</span> pv max</div>
+              </div>
+              <div class="force">
+                <span>💪</span>
+                <span>230</span>
+              </div>
+              <div class="series">
+                <span title="série en cours">36</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- IA -->
+        <div class="right">
+          <div class="card">
+            <h3>Mob_name</h3>
+            <div class="stats">
+              <div class="lifebar">
+                <progress max="100" value="80"></progress>
+                <span>❤</span>
+              </div>
+              <div class="force">
+                <span>230</span>
+                <span>💪</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ACTION -->
+        <button>Fight 🗡</button>
+
+        <!-- INFORMATION CBT EN COURS -->
+        <div class="status-fight">
+          <div class="left">
+            <h4>Information sur les 5 dernières actions que tu as subies...</h4>
+            <ul>
+              <li>
+                <span>tour n°5</span>
+                <span>Mob_name t'as causé 26 dommages !!</span>
+              </li>
+              <li>
+                <span>tour n°4</span>
+                <span>Mob_name t'as causé 38 dommages !!</span>
+              </li>
+              <li>
+                <span>tour n°3</span>
+                <span>Mob_name t'as causé 12 dommages !!</span>
+              </li>
+              <li>
+                <span>tour n°2</span>
+                <span>Mob_name t'as causé 72 dommages !!</span>
+              </li>
+              <li>
+                <span>tour n°1</span>
+                <span>Mob_name t'as causé 5 dommages !!</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="right">
+            <h4>Les 5 dernières actions que tu as infligés...</h4>
+            <ul>
+              <li>
+                <span>tour n°5</span>
+                <span>Player_name a causé 26 dommages !!</span>
+              </li>
+              <li>
+                <span>tour n°4</span>
+                <span>Player_name a causé 38 dommages !!</span>
+              </li>
+              <li>
+                <span>tour n°3</span>
+                <span>Player_name a causé 12 dommages !!</span>
+              </li>
+              <li>
+                <span>tour n°2</span>
+                <span>Player_name a causé 72 dommages !!</span>
+              </li>
+              <li>
+                <span>tour n°1</span>
+                <span>Player_name a causé 5 dommages !!</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- INFORMATION -->
+        <div class="win">
+          <h3>Player WIN</h3>
+          <p>
+            Excellent, tu améliores tes statistiques<br />grâce à ta victoire...
+            Sois-en digne 👀<br /><br />+50 points de vie<br />+25 en force...
+          </p>
+          <div class="actions">
+            <button>Scores</button>
+            <button>Recommance</button>
+          </div>
+        </div>
+
+        <div class="loose">
+          <h3>YOU LOOSE</h3>
+          <p>Ah ouais...<br />Tu t'es fait pété comme une merde...</p>
+          <div class="actions">
+            <button>Scores</button>
+            <button>Recommance</button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

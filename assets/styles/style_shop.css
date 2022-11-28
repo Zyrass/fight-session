@@ -1,0 +1,149 @@
+/**
+ * =============================================================
+ * SHOPPING
+ * =============================================================
+ */
+
+/**
+ * =============================================================
+ * MAIN
+ * =============================================================
+ */
+main {
+  background-image: url(../images/lieu/shopping.jpeg);
+  background-size: cover;
+  filter: contrast(120%) sepia(50%);
+  box-shadow: inset 0 0 150px var(--black-intense);
+}
+
+/**
+ * =============================================================
+ * MAIN H1
+ * =============================================================
+ */
+main h1 {
+  position: absolute;
+  right: 50px;
+  top: 50px;
+}
+
+/**
+ * =============================================================
+ * MAIN SECTION.MENU
+ * =============================================================
+ */
+main section.menu {
+  background-color: var(--warning);
+  opacity: 0.9;
+  height: fit-content;
+  width: 60%;
+  margin-top: 50px;
+  margin-left: 50px;
+  border: 4px solid var(--warning-dark);
+  box-shadow: inset 0 0 150px var(--black-intense), 0 0 5px var(--black-intense);
+  padding: 25px;
+  overflow: hidden;
+  border-radius: 4px;
+}
+main section.menu dl {
+  background-color: var(--muted);
+  margin-bottom: 5px;
+  padding: 5px;
+  transition: background-color 0.2s;
+}
+main section.menu dl:hover {
+  background-color: var(--muted-dark);
+}
+
+/**
+ * =============================================================
+ * MAIN SECTION.MENU CARD_CONTAINER-SHOP
+ * =============================================================
+ */
+main section.menu div.card_container-shop {
+  background-color: var(--muted);
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  transition: background-color 0.2s, color 0.2s;
+  padding: 10px;
+  border-radius: 4px;
+  border: 2px solid var(--warning-dark);
+  box-shadow: 0 0 2.5px var(--black-intense);
+}
+main section.menu div.card_container-shop:last-child {
+  margin-bottom: 0;
+}
+
+main section.menu div.card_container-shop:hover {
+  background-color: var(--info-dark);
+}
+
+main section.menu div.card_container-shop small {
+  color: var(--black-intense);
+}
+main section.menu div.card_container-shop:hover small {
+  color: var(--gold);
+}
+
+main section.menu div.card_container-shop img {
+  filter: drop-shadow(0 0 2.5px var(--black-intense));
+  width: 75px;
+  background-color: var(--warning-dark);
+  padding: 10px;
+  margin-right: 20px;
+  border: 2px solid var(--black-intense);
+}
+
+main section.menu div.card_container-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+main section.menu div.card_container-content .card_container-description {
+  width: 100%;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+main section.menu div.card_container-content .card_container-description h4 {
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  color: var(--danger);
+}
+
+main section.menu div.card_container-content .card_container-description p {
+  color: var(--black-intense);
+  font-style: italic;
+  letter-spacing: 1.8px;
+  font-size: 16px;
+}
+
+main section.menu div.card_container-shop:hover .card_container-description p {
+  color: var(--white);
+}
+
+main section.menu div.card_container-content .card_container-action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+main section.menu div.card_container-content .card_container-action div {
+  font-size: 16px;
+  font-weight: 900;
+  color: var(--warning-dark);
+}
+
+main section.pnj img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 30%;
+  filter: drop-shadow(0 0 5px white);
+}

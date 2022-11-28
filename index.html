@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- STYLES CSS -->
+    <link rel="stylesheet" href="./assets/styles/base.css" />
+    <link rel="stylesheet" href="./assets/styles/style_presentation.css" />
+    <!-- SCRIPTS JS -->
+    <script src="./scripts/base/hour.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <span>RPG en Vanilla JS</span>
+    </header>
+    <main>
+      <h1>Fight</h1>
+      <p>
+        Bienvenue dans ce <strong>mini RPG à l'ancienne</strong>. <br />Il se
+        veut simple d'accès mais avec une certaine particularité.
+      </p>
+      <p>
+        En effet
+        <em
+          >il est tout à fait possible de se faire éclater dès vos premières
+          partie</em
+        >.<br />
+        Le but étant d'enchaîner un maximum de combat afin d'augmenter sa séries
+        de victoire. Ainsi, tu te hisseras dans ton top 10.
+      </p>
+      <p>
+        Alors te sens-tu d'attaque pour relever le défi ou bien tu vas fuire
+        comme une vielle merde... ?
+      </p>
+      <form action="/pages/form/createHeroe.html">
+        <button id="createPlayer" type="submit">
+          J'accepte bien évidemment le défi
+        </button>
+        <button id="showLooser">Je refuse catégoriquement le défi</button>
+      </form>
+      <div class="looser" id="looser">
+        <h2></h2>
+        <button id="hideLooser">X</button>
+      </div>
+    </main>
+    <footer>
+      <span>Copyright &copy; 2022-2023</span>
+      <span id="date"></span>
+      <span>Alain Guillon</span>
+    </footer>
+
+    <script>
+      const btnPlayer = document.getElementById("createPlayer");
+
+      /**
+       * LOOSER
+       */
+      const looser = document.getElementById("looser");
+      const btnShowLooser = document.getElementById("showLooser");
+      const btnHideLooser = document.getElementById("hideLooser");
+      const h2Looser = document.querySelector("#looser h2");
+
+      btnPlayer.addEventListener("click", (e) => {
+        location.href("/pages/form/createHeroe.html");
+      });
+      btnShowLooser.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        const listMessages = [
+          "Espèce de carne, va jouer aux billes mange merde",
+          "Grosse merde, va te faire enc***...",
+          "T'es sérieux, tu viens pourquoi au juste baltringue",
+          "Vas-y... je me casse le cul à faire un jeu et t'y joue même pas...",
+          "Espèce de moldue",
+          "Va te faire niquer par un dromadaire...",
+          "T'es nul(e)",
+          "Espèce de gros Bouffon !!",
+          "Fuck you bitch !",
+          "Oh peuchère t'es dégun !!",
+          "Le cerceuil de tout tes morts, arrache toi vite !!",
+          "Espèce de bâtard(e)",
+          "Tu sais quoi vas-y, je ne vais pas perdre mon temps avec toi",
+        ];
+
+        h2Looser.textContent =
+          listMessages[Math.floor(Math.random() * listMessages.length)];
+        looser.style.visibility = "visible";
+      });
+      btnHideLooser.addEventListener("click", (e) => {
+        e.preventDefault();
+        looser.style.visibility = "hidden";
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+/**
+ * =============================================================
+ * VARIABLE
+ * =============================================================
+ */
+:root {
+  /* https://flatuicolors.com/palette/cn */
+  --primary: #57606f;
+  --secondary: #2f3542;
+  --white: #f1f2f6;
+  --gold: #eccc68;
+
+  /* LIGTH */
+  --success: #2ed573;
+  --warning: #ffa502;
+  --danger: #ff4757;
+  --info: #1e90ff;
+  --muted: #ced6e0;
+
+  /* DARK */
+  --success-dark: #229150;
+  --warning-dark: #b17300;
+  --danger-dark: #992630;
+  --info-dark: #114e8a;
+  --muted-dark: #7e838a;
+
+  --text-color: var(--secondary);
+  --text-color-light: var(--primary);
+
+  --black-intense: #010003;
+  --bg-color-light: var(--primary);
+  --bg-color-dark: var(--secondary);
+}
+
+/**
+ * =============================================================
+ * RESET
+ * =============================================================
+ */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+*::selection {
+  background-color: var(--secondary);
+}
+
+body {
+  min-height: 100vh;
+  /* overflow-y: hidden; */
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 54px 1fr 54px;
+  background-color: var(--bg-color-light);
+}
+
+h1 {
+  grid-area: title;
+  font-size: 60px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 0 0 5px var(--black-intense);
+  color: var(--white);
+}
+
+li {
+  list-style: none;
+}
+
+strong {
+  color: var(--info-strong);
+  font-weight: 900;
+}
+em {
+  color: var(--danger-em);
+  font-weight: 100;
+}
+
+button {
+  height: fit-content;
+  padding: 8px 16px;
+  text-transform: uppercase;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+/**
+ * =============================================================
+ * HEADER + FOOTER
+ * =============================================================
+ */
+header,
+footer {
+  background-color: var(--bg-color-dark);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 0 0 5px var(--black-intense);
+}
+header span,
+footer span {
+  color: var(--white);
+}
+header span:first-child,
+footer span:last-child {
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  color: var(--gold);
+}

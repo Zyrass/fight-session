@@ -1,0 +1,169 @@
+/**
+ * =============================================================
+ * FORMULAIRE
+ * =============================================================
+ */
+
+/**
+ * =============================================================
+ * MAIN
+ * =============================================================
+ */
+main {
+  box-shadow: inset 0 0 150px var(--black-intense);
+  background-color: var(--bg-color-dark);
+  padding: 50px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px 25px 25px fit-content;
+  grid-template-areas:
+    "title"
+    "inputPseudo"
+    "avatars";
+  row-gap: 15px;
+  justify-items: center;
+  align-content: center;
+}
+
+/**
+ * =============================================================
+ * MAIN FORMULAIRE
+ * =============================================================
+ */
+main section.formulaire {
+  margin: 0 auto;
+  min-width: 776px;
+  max-width: 996px;
+}
+
+/**
+ * =============================================================
+ * MAIN FORMULAIRE DIV.INPUT
+ * =============================================================
+ */
+main section.formulaire div.input {
+  grid-area: inputPseudo;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 69%;
+  margin: 0 auto;
+}
+
+/**
+ * =============================================================
+ * MAIN FORMULAIRE DIV.INPUT INPUT
+ * =============================================================
+ */
+main section.formulaire div input[type="text"] {
+  width: 100%;
+  margin-right: 10px;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+/**
+ * =============================================================
+ * MAIN FORMULAIRE DIV.INPUT SMALL
+ * =============================================================
+ */
+main section.formulaire div.input small {
+  background-color: var(--danger-em);
+  color: var(--white);
+  font-style: italic;
+  align-self: flex-start;
+  margin-top: 5px;
+  margin-left: 0;
+  padding: 5px 10px;
+  transition: visibility 0.2s;
+  visibility: hidden;
+}
+
+/**
+ * =============================================================
+ * MAIN FORMULAIRE DIV.AVATARS
+ * =============================================================
+ */
+main section.formulaire div.avatars {
+  grid-area: avatars;
+  position: relative;
+}
+
+/**
+ * =============================================================
+ * MAIN FORMULAIRE DIV.AVATARS H2
+ * =============================================================
+ */
+main section.formulaire div.avatars h2 {
+  position: absolute;
+  transform: rotate(-90deg);
+  letter-spacing: 5px;
+  top: 200px;
+  left: -300px;
+  text-align: center;
+  font-size: 32px;
+  text-transform: uppercase;
+  color: var(--white);
+  text-shadow: 0 0 5px var(--black-intense);
+}
+
+/**
+ * =============================================================
+ * MAIN FORMULAIRE DIV.AVATARS DIV
+ * =============================================================
+ */
+main section.formulaire div.avatars div {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  grid-auto-flow: row;
+  row-gap: 25px;
+  column-gap: 50px;
+}
+
+/**
+ * =============================================================
+ * MAIN FORMULAIRE DIV.AVATARS DIV FIGURE
+ * =============================================================
+ */
+main section.formulaire div.avatars div figure {
+  padding: 5px;
+  cursor: pointer;
+  width: 150px;
+}
+
+main section.formulaire div.avatars div figure img {
+  width: 100%;
+  border-radius: 50%;
+  background-size: cover;
+  border: 4px solid var(--white);
+  box-shadow: 0 0 5px var(--black-intense);
+  filter: sepia(100%);
+  transition: filter 0.2s;
+}
+
+main section.formulaire div.avatars div figure:hover img {
+  filter: sepia(25%);
+}
+
+main section.formulaire div.avatars div figure figcaption {
+  text-align: center;
+  font-style: italic;
+  font-size: 28px;
+  font-weight: 900;
+  text-shadow: 2px 2px 1px var(--black-intense);
+  color: var(--white);
+  z-index: -1;
+}
+
+main section.formulaire div.avatars button {
+  grid-area: button;
+  width: 100%;
+  height: fit-content;
+  margin: 50px auto 0;
+  padding: 8px;
+  text-transform: uppercase;
+  font-weight: 900;
+  cursor: pointer;
+  background-color: var(--success);
+}
